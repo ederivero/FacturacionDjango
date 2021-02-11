@@ -74,16 +74,19 @@ class MesaModel(models.Model):
     mesaNumero = models.CharField(
         max_length=15,
         db_column="mesa_numero",
-        null=False)
+        null=False,
+        verbose_name="Numero de la mesa")
 
     mesaCapacidad = models.IntegerField(
         db_column="mesa_capacidad",
-        null=False)
+        null=False,
+        verbose_name="Capacidad de la mesa")
 
     mesaEstado = models.BooleanField(
         db_column="mesa_estado",
         default=True,
-        null=False)
+        null=False,
+        verbose_name="Estado de la mesa")
 
     def __str__(self):
         return "El numero de la mesa es: " + self.mesaNumero
