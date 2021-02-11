@@ -1,1 +1,1 @@
-web: gunircorn Restaurante.wsgi
+web: gunicorn Restaurante.wsgi
